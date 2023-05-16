@@ -1,0 +1,114 @@
+@font-face {
+  font-family: "NimbusSansDOT-BlacExte";
+  src: url("NimbusSansDOT-BlacExte.otf") format("opentype");
+}
+
+body {
+  font-family: "NimbusSansDOT-BlacExte", sans-serif;
+  background-image: linear-gradient(to bottom right, #591194, #ffffcc);
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+.center {
+  height: calc(100vh - 40px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h5 {
+  margin: 5px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #1d1801;
+  text-shadow: 1px 1px 2px #5c3cbb;
+}
+
+p {
+  font-size: 20px;
+  white-space: pre-line;
+  color: #1e085f;
+  transform: scaleX(1.2);
+  text-shadow: 1px 1px 2px #fbd30c;
+}
+
+.center {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.property-card {
+  height: 540px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1); /* https://codepen.io/markelrayes/pen/ZEGVBZm */
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 15px 15px 27px #fbd30c, -15px -15px 27px #5c3cbb;
+}
+
+.property-image {
+  height: 216px;
+  width: 300px;
+  padding: 16px;
+  position: absolute;
+  top: 0px;
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background-image: url("https://picsum.photos/600/600");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.property-description {
+  background-image: linear-gradient(to top left, #591194, #ffffcc);
+  height: 324px;
+  width: 300px;
+  position: absolute;
+  bottom: 0px;
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  padding: 8px 16px;
+  text-align: center;
+}
+
+.property-card:hover .property-description {
+  height: 0px;
+  padding: 0px 16px;
+}
+
+.property-card:hover .property-image {
+  height: 540px;
+}
+
+.property-image-title {
+  text-align: center;
+  position: Relative;
+  top: 30%;
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+  color: rgb(255, 255, 255);
+  font-size: 1.2em;
+}
+
+.property-card:hover .property-image-title {
+  opacity: 1;
+}
